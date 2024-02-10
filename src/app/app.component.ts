@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Bridge } from './bridge';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'bridge';
+  title = 'Angular bridge';
+
+  currentBridge!: Bridge;
+
+  handleBridgeSelected(bridge:Bridge):void{
+    console.log('handle bridge change', bridge);
+    this.currentBridge = bridge;
+  }
+
 }

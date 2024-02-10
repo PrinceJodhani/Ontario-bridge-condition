@@ -1,0 +1,13 @@
+<!-- <p
+*ngIf="bridge"
+>{{ bridge.name }}</p> -->
+
+<div>
+  <app-bridge-info-panel
+  *ngIf="bridge"
+  [bridge]="bridge"
+  >
+
+  </app-bridge-info-panel>
+  <app-bridge-info-map></app-bridge-info-map>
+</div>
